@@ -17,10 +17,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.0'
-  gem 'web-console', '~> 2.0'
   gem 'byebug'
   gem 'spring'
 end
+
+gem 'web-console', group: :development
 
 group :test do
   gem 'minitest-reporters', '~> 1.5.0'
