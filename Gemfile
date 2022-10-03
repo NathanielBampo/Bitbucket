@@ -19,6 +19,9 @@ group :development, :test do
   gem 'sqlite3', '~> 1.3.0'
   gem 'byebug'
   gem 'spring'
+  gem 'guard', '~> 2.18.0'
+  gem 'guard-bundler', '~> 2.2.1', require: false
+  gem 'guard-rails', '~> 0.8.1', require: false
 end
 
 gem 'web-console', group: :development
@@ -33,4 +36,3 @@ group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '~> 0.0.3'
 end
-
