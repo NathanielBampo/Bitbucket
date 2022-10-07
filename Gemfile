@@ -10,6 +10,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'thor', '~> 0.19.0' 
+gem 'htmlbeautifier', '1.3.0'
+
+gem "bootstrap-sass"
 
 gem 'bcrypt', '~> 3.1.7'
 
