@@ -9,10 +9,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'thor', '~> 0.19.0' 
+gem 'thor', '~> 0.19.0'
 gem 'htmlbeautifier', '1.3.0'
 
-gem "bootstrap-sass"
+gem 'bootstrap-sass'
 
 gem 'bcrypt', '~> 3.1.7'
 
@@ -25,6 +25,7 @@ group :development, :test do
   gem 'guard', '~> 2.18.0'
   gem 'guard-bundler', '~> 2.2.1', require: false
   gem 'guard-rails', '~> 0.8.1', require: false
+  gem 'faker', '2.0.0'
 end
 
 gem 'web-console', group: :development
