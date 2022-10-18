@@ -7,6 +7,10 @@ add-migration:
 g:
 	bundle exec guard
 
+# Seed
+seed:
+	bundle exec rake db:seed
+
 # Migration
 dbm:
 	bundle exec rake db:migrate
@@ -14,3 +18,11 @@ dbm:
 # Rollback
 dbr:
 	bundle exec rake db:rollback
+
+# Reset
+reset:
+	bundle exec rake db:migrate:reset
+
+# Drop
+drop:
+	bundle exec rake db:drop db:create db:migrate
