@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find(params[:id])
-  end
-
+  before_action :set_user, only: [:show]
+  
   def new
     @user = User.new
   end
@@ -11,6 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      session[:user_id] = @user.id
+      
       flash[:success] = "Welcome to the Sample App"
       redirect_to @user
     else
@@ -22,7 +22,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def index
+    @users = User.all
+  end
+
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:name, :email, :password,
