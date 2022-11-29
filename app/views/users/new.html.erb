@@ -14,7 +14,13 @@
       <%= f.text_field :password, class: "form-control" %>
 
       <%= f.label :password_confirmation %>
-      <%= f.text_field :password_confirmation, class: "form-control" %>
+      <% if @user.errors.full_messages.any? %>
+        <div class="field_with_errors">
+          <%= f.text_field :password_confirmation, class: "form-control" %>
+        </div>
+      <% else %>
+        <%= f.text_field :password_confirmation, class: "form-control" %>
+      <% end %>
 
       <%= f.submit "Create new account", class: "btn btn-primary" %>
 
