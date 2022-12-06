@@ -19,6 +19,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rubocop'
+  gem 'rubocop-minitest'
   gem 'sqlite3', '~> 1.3.0'
   gem 'byebug'
   gem 'spring'

@@ -55,9 +55,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div.field_with_errors'
 
     assert_select 'li', text: "Name can't be blank"
-    # assert_select 'li', text: "Email can't be blank"
-    assert_select 'li', text: 'Email is invalid'
+    assert_select 'li', text: "Email is invalid"
     assert_select 'li', text: "Password confirmation doesn't match Password"
-    # assert_select 'li', text: 'Password is too short (minimum is 1 character)'
+    assert_select 'li', text: "Password is too long (maximum is 2 characters)"
   end
 end
