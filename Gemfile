@@ -15,6 +15,8 @@ gem 'htmlbeautifier', '1.3.0'
 gem 'bootstrap-sass'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'puma', '6.0.0'
+gem 'faker', '2.0.0'
 
 # gem 'capistrano-rails', group: :development
 
@@ -27,7 +29,6 @@ group :development, :test do
   gem 'guard', '~> 2.18.0'
   gem 'guard-bundler', '~> 2.2.1', require: false
   gem 'guard-rails', '~> 0.8.1', require: false
-  gem 'faker', '2.0.0'
 end
 
 gem 'web-console', group: :development
@@ -41,6 +42,4 @@ end
 group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '~> 0.0.3'
-  gem 'puma', '6.0.0'
-  gem 'faker', '2.0.0'
 end

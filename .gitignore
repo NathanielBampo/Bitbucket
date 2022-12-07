@@ -15,5 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
-.byebug_history
 /spring/*.pid
+
+.byebug_history
+.ruby-version
