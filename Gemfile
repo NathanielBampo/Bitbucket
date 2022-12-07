@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'thor', '~> 0.19.0'
 gem 'htmlbeautifier', '1.3.0'
+gem 'pg', '0.17.1'
 
 gem 'bootstrap-sass'
 
@@ -23,7 +24,6 @@ gem 'faker', '2.0.0'
 group :development, :test do
   gem 'rubocop'
   gem 'rubocop-minitest'
-  gem 'sqlite3', '~> 1.3.0'
   gem 'byebug'
   gem 'spring'
   gem 'guard', '~> 2.18.0'
@@ -34,12 +34,12 @@ end
 gem 'web-console', group: :development
 
 group :test do
+  # gem 'sqlite3', '~> 1.3.0'
   gem 'minitest-reporters', '~> 1.5.0'
   gem 'mini_backtrace', '~> 0.1.3'
   gem 'guard-minitest', '~> 2.4.6'
 end
 
 group :production do
-  gem 'pg', '0.17.1'
   gem 'rails_12factor', '~> 0.0.3'
 end
