@@ -14,6 +14,7 @@ gem 'htmlbeautifier', '1.3.0'
 gem 'pg', '0.17.1'
 
 gem 'bootstrap-sass'
+gem 'awesome_print'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'puma', '6.0.0'
