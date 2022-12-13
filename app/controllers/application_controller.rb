@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include SessionsHelper
+  
   rescue_from ActiveRecord::RecordNotFound, with: :notfound
 
   def notfound

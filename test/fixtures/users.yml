@@ -1,5 +1,5 @@
-one:
+gogi:
   id: 23
-  name: Gogi
+  name: man
   email: gogi@gmail.com
-  password_digest: <%= User.password('1') %>
+  password_digest: <%= User.digest('1') %>

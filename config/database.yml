@@ -17,14 +17,26 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+# development:
+#   <<: *default
+#   username: pan
+#   database: bitbucket_postgres_development
+
 development:
-  <<: *default
-  username: pan
-  database: bitbucket_postgres_development
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+# test:
+#   <<: *default
+#   database: bitbucket_postgres_test
 
 test:
-  <<: *default
-  database: bitbucket_postgres_test
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
 
 production:
   <<: *default

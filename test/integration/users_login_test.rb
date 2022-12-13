@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
+  
+  def setup
+    @user = users(:gogi)
+  end
+  
   test "messages small" do
     get login_path
 
