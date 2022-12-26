@@ -1,17 +1,11 @@
-name: CI
+name: Bitbucket_test
 # run-name: ${{ github.actor }} is learning GitHub Actions
 
 on: push
 
 jobs:
   test_one:
-    # strategy:
-    #   fail-fast: false
-    #   matrix:
-    #   os: [ubuntu-latest]
-    #   ruby: 2.4.9
-
-    # runs-on: ${{ matrix.os }}
+    
     runs-on: ubuntu-latest
     
     steps:

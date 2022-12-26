@@ -7,4 +7,4 @@ by [Michael Hartl](http://www.michaelhartl.com/)
 
 # Bitbucker
 
-![CI](https://github.com/NathanielBampo/Bitbucket/actions/workflows/test_sample.yml/badge.svg)
+![Bitbucket_test](https://github.com/NathanielBampo/Bitbucket/actions/workflows/ci.yml/badge.svg)
