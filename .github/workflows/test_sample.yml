@@ -1,5 +1,5 @@
-name: Sample_app
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: CI
+# run-name: ${{ github.actor }} is learning GitHub Actions
 
 on:
   - push
@@ -9,8 +9,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-      os: [ubuntu-20.04]
+      os: [ubuntu-latest]
       ruby: 2.4.9
+
     runs-on: ${{ matrix.os }}
     
     steps:
@@ -22,5 +23,3 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     
     - run: bundle exec rake
-
-
