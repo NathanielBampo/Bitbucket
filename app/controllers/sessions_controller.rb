@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email.downcase]) # Find equal email
+    user = User.find_by(email: params[:session][:email].downcase) # Find equal email
 
     if user && user.authenticate(params[:session][:password]) # test equal password
       log_in(user)
@@ -12,8 +12,9 @@ class SessionsController < ApplicationController
       flash[:success] = "You log in"
       redirect_to user
     else
+      # render :new # render form_field new session and print error
       flash.now[:danger] = 'Invalide email or password combination'
-      render "new" # render form_field new session and print error
+      render "new"
     end
   end
 
