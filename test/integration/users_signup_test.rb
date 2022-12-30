@@ -21,6 +21,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 
     # Ожидание что false окажется true
     assert_not flash.nil?
+    assert_not is_logged_in?
   end
 
   test 'valid signup information' do
@@ -37,6 +38,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
 
     assert flash.any?
+    assert is_logged_in?
   end
 
   test 'messages in errors' do
